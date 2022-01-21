@@ -82,7 +82,7 @@ echo $AKS_AD_AKSADMIN_GROUP_ID
 # Replace with your AD Domain - aksadmin1@stacksimplifygmail.onmicrosoft.com
 AKS_AD_AKSADMIN1_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS Admin1" \
-  --user-principal-name aksadmin1@stacksimplifygmail.onmicrosoft.com \
+  --user-principal-name dacdo99aol.onmicrosoft.com \
   --password @AKSDemo123 \
   --query objectId -o tsv)
 echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
@@ -91,7 +91,8 @@ echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 az ad group member add --group aksadmins --member-id $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 
 # Make a note of Username and Password
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+# Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@dacdo99aol.onmicrosoft.com
 Password: @AKSDemo123
 ```
 
