@@ -114,7 +114,7 @@ ssh-keygen \
 ls -lrt $HOME/.ssh/aks-prod-sshkeys
 
 # Set SSH KEY Path
-AKS_SSH_KEY_LOCATION=/Users/kalyanreddy/.ssh/aks-prod-sshkeys/aksprodsshkey.pub
+AKS_SSH_KEY_LOCATION=/Users/dac/.ssh/aks-prod-sshkeys/aksprodsshkey.pub
 echo $AKS_SSH_KEY_LOCATION
 ```
 - Reference for [Create SSH Key](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed)
@@ -201,7 +201,8 @@ az aks get-credentials --name ${AKS_CLUSTER}  --resource-group ${AKS_RESOURCE_GR
 kubectl get nodes
 URL: https://microsoft.com/devicelogin
 Code: HL724557M
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+# Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@dacdo99aol.onmicrosoft.com
 Password: @AKSDemo123
 
 # Cluster Info
