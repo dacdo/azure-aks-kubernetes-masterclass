@@ -21,7 +21,7 @@
 # Edit export statements to make any changes required as per your environment
 # Execute below export statements
 AKS_RESOURCE_GROUP=aks-prod
-AKS_REGION=centralus
+AKS_REGION=eastus
 echo $AKS_RESOURCE_GROUP, $AKS_REGION
 
 # Create Resource Group
@@ -82,7 +82,8 @@ echo $AKS_AD_AKSADMIN_GROUP_ID
 # Replace with your AD Domain - aksadmin1@stacksimplifygmail.onmicrosoft.com
 AKS_AD_AKSADMIN1_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS Admin1" \
-  --user-principal-name aksadmin1@stacksimplifygmail.onmicrosoft.com \
+  # --user-principal-name aksadmin1@stacksimplifygmail.onmicrosoft.com \
+  --user-principal-name aksadmin1@dacdo99aol.onmicrosoft.com \
   --password @AKSDemo123 \
   --query objectId -o tsv)
 echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
@@ -91,7 +92,8 @@ echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 az ad group member add --group aksadmins --member-id $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 
 # Make a note of Username and Password
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+# Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@dacdo99aol.onmicrosoft.com
 Password: @AKSDemo123
 ```
 
@@ -113,7 +115,7 @@ ssh-keygen \
 ls -lrt $HOME/.ssh/aks-prod-sshkeys
 
 # Set SSH KEY Path
-AKS_SSH_KEY_LOCATION=/Users/kalyanreddy/.ssh/aks-prod-sshkeys/aksprodsshkey.pub
+AKS_SSH_KEY_LOCATION=/Users/dac/.ssh/aks-prod-sshkeys/aksprodsshkey.pub
 echo $AKS_SSH_KEY_LOCATION
 ```
 - Reference for [Create SSH Key](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/create-ssh-keys-detailed)
@@ -144,7 +146,7 @@ Go to Services -> Azure Active Directory -> Properties -> Tenant ID
 
 # Set Windows Server/Node Username & Password
 AKS_WINDOWS_NODE_USERNAME=azureuser
-AKS_WINDOWS_NODE_PASSWORD="P@ssw0rd1234"
+AKS_WINDOWS_NODE_PASSWORD="P@ssw0rd123456789"
 echo $AKS_WINDOWS_NODE_USERNAME, $AKS_WINDOWS_NODE_PASSWORD
 ```
 
@@ -200,7 +202,8 @@ az aks get-credentials --name ${AKS_CLUSTER}  --resource-group ${AKS_RESOURCE_GR
 kubectl get nodes
 URL: https://microsoft.com/devicelogin
 Code: HL724557M
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+# Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@dacdo99aol.onmicrosoft.com
 Password: @AKSDemo123
 
 # Cluster Info
