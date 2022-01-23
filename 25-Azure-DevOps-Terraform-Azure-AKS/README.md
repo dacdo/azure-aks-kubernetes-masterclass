@@ -159,6 +159,7 @@ Example: https://github.com/stacksimplify/azure-devops-aks-kubernetes-terraform-
 - Click on **Application Permissions**
 - Check **Directory.ReadWrite.All** and click on **Add Permission**
 - Click on **Grant Admin consent for Default Directory**
+- Add and grant Group.ReadWrite.All as well
 
 
 
